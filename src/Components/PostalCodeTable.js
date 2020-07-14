@@ -1,8 +1,9 @@
 import React from 'react';
+import './PostalCodeTable.css';
 
 function PostalCodeTable({ cep, address, district, city, state }) {
   return (
-    <table>
+    <table className="postal-code-table">
       <thead>
         <tr>
           <th>CEP</th>

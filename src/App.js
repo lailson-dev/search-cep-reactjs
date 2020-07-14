@@ -10,7 +10,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   async function fetchData() {
-    await axios.get("https://cep.awesomeapi.com.br/json/38183052")
+    await axios.get("https://cep.awesomeapi.com.br/json/05424020")
       .then(res => {
         setData(res.data);
       })

@@ -1,0 +1,29 @@
+.postal-code-table {
+	display: block;
+	width: 700px;
+	margin: 200px auto 0 auto;
+	padding: 50px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+	box-sizing: border-box;
+}
+
+.postal-code-table thead,
+.postal-code-table tbody {
+	width: 100%;
+}
+
+.postal-code-table thead tr th,
+.postal-code-table tbody tr td {
+	border-radius: 5px;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	color: #4D4C4C;
+}
+
+.postal-code-table thead tr th {
+	padding: 15px 25px;
+	text-transform: uppercase;
+}
+
+.postal-code-table tbody tr td {
+	padding: 10px;
+}
