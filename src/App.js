@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+
+import Loader from './Components/Loader';
 import PostalCodeTable from './Components/PostalCodeTable';
 
 function App() {
 
-  const [data, setData] = useState({});
+  const [data, setData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   async function fetchData() {
     await axios.get("https://cep.awesomeapi.com.br/json/38183052")
@@ -20,7 +23,13 @@ function App() {
     fetchData();
   }, []);
 
-  return <PostalCodeTable {...data} />;
+  useEffect(() => {
+    if (data) {
+      setIsLoading(false);
+    }
+  }, [data]);
+
+  return isLoading ? <Loader /> : <PostalCodeTable {...data} />;
 }
 
 export default App;
